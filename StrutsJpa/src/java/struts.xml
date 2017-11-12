@@ -1,0 +1,42 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="StrutsJpa" extends="struts-default">
+        <action name="iniciarSesion" method="iniciarSesionAction" class="epa.diplomado.action.UsuarioAction">
+            <result name="success">/bienvenido.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+        
+         <action name="registrarAction" method="registrarAction" class="epa.diplomado.action.UsuarioAction">
+            <result name="success">/index.jsp</result>
+            <result name="error">/registrar.jsp</result>
+        </action>
+        <action name="listarUsuarios" method="listarUsuarios" class="epa.diplomado.action.UsuarioAction">
+            <result name="success">/listaUsuarios.jsp</result>
+            <result name="error">/bienvenido.jsp</result>
+        </action>
+        
+        
+        <action name="listaAmigos" method="listaAmigos" class="epa.diplomado.action.AmigoAction">
+            <result name="success">/listaAmigos.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+        
+        <action name="eliminarAmigo" method="eliminarAmigo" class="epa.diplomado.action.AmigoAction">
+            <result name="success">/listaAmigos.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+        <action name="modificarAmigo" method="modificarAmigo" class="epa.diplomado.action.AmigoAction">
+            <result name="success">/modificaAmigo.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+        <action name="ActualizarAmigos" method="ActualizarAmigos" class="epa.diplomado.action.AmigoAction">
+            <result name="success">/listaAmigos.jsp</result>
+            <result name="error">/modificaAmigo.jsp</result>
+        </action>
+        
+    </package>
+</struts>
